@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'theme';
+@import 'functions';
+
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  background: background('main');
+  color: color('main');
+  font-family: $fontMain;
+}
+
+body {
+  min-height: 100%;
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}

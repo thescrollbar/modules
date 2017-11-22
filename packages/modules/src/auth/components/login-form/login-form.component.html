@@ -1,0 +1,18 @@
+<form [formGroup]="form.instance">
+  <div>
+    <input
+      type="text"
+      [formControl]="form.instance.get('mail')"
+      placeholder="Mail"
+    />
+  </div>
+  <div>
+    <input
+      type="password"
+      [formControl]="form.instance.get('password')"
+      placeholder="Password"
+    />
+  </div>
+
+  <button (click)="onLogin()">login</button>
+</form>

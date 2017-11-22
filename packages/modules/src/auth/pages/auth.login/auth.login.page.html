@@ -1,0 +1,14 @@
+<ng-container *ngIf="(isAuthenticated$ | async); else loginFormTplRef">
+  <pre>
+    {{ authData$ | async | json }}
+  </pre>
+</ng-container>
+
+<ng-template #loginFormTplRef>
+
+  <scrl-login-form-component
+    [form]="form"
+    (login)="login($event)">
+  </scrl-login-form-component>
+
+</ng-template>
